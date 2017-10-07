@@ -1,5 +1,6 @@
 # https://github.com/shantnu/Webcam-Face-Detect/blob/master/webcam.py
-# https://github.com/ageitgey/face_recognition
+# face detection without third party library
+
 import cv2
 import sys
 import logging as log
