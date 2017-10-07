@@ -2,7 +2,9 @@ import cv2
 import numpy as np
 MIN_MATCH_COUNT = 30
 
-detector = cv2.SIFT()
+# detector = cv2.SIFT()
+# python3 api change
+detector = cv2.xfeatures2d.SIFT_create()
 
 FLANN_INDEX_KDITREE = 0
 flannParam = dict(algorithm=FLANN_INDEX_KDITREE, tree=5)
