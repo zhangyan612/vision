@@ -3,7 +3,7 @@ cam = cv2.VideoCapture(0)
 detector = cv2.CascadeClassifier('Classifiers/face.xml')
 i = 0
 offset = 50
-name = raw_input('enter your name: ')
+name = input('enter your name: ')
 while True:
     ret, im = cam.read()
     gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
