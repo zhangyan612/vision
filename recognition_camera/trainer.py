@@ -1,7 +1,7 @@
 import cv2
 import os
 import numpy as np
-from PIL import Image 
+from PIL import Image
 
 recognizer = cv2.face.LBPHFaceRecognizer_create() # createLBPHFaceRecognizer()
 cascadePath = "Classifiers/face.xml"
@@ -40,5 +40,5 @@ cv2.imshow('test', images[0])
 cv2.waitKey(1)
 
 recognizer.train(images, np.array(labels))
-recognizer.save('trainer/trainer.yml')
+recognizer.write('trainer/trainer.yml')
 cv2.destroyAllWindows()

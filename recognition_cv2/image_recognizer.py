@@ -188,10 +188,12 @@ def predict(test_img):
 # create our LBPH face recognizer
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()  # createLBPHFaceRecognizer()
 
-if os.path.isfile('trained/trained.yml'): #False:
+trained_model = 'trained/trained.yml'
+
+if os.path.isfile(trained_model):
     # skip training
     print('skip training, load from yml')
-    face_recognizer.read('trained/trained.yml')
+    face_recognizer.read(trained_model)
 else:
     print("Preparing data...")
     faces, labels = prepare_training_data("training-data")
@@ -201,7 +203,7 @@ else:
     print("Total labels: ", len(labels))
     # train our face recognizer of our training faces and save model
     face_recognizer.train(faces, np.array(labels))
-    face_recognizer.write('trained/trained.yml')
+    face_recognizer.write(trained_model)
 
 # ### Prediction
 print("Predicting images...")
