@@ -141,7 +141,7 @@ def prepare_training_data(data_folder_path):
         # our subject directories start with letter 's' so
         # ignore any non-relevant directories if any
         if not dir_name.startswith("s"):
-            continue;
+            continue
 
         # ------STEP-2--------
         # extract label number of subject from dir_name
@@ -163,7 +163,7 @@ def prepare_training_data(data_folder_path):
 
             # ignore system files like .DS_Store
             if image_name.startswith("."):
-                continue;
+                continue
 
             # build image path
             # sample image path = training-data/s1/1.pgm
@@ -240,7 +240,7 @@ print("Total labels: ", len(labels))
 # In[6]:
 
 # create our LBPH face recognizer
-face_recognizer = cv2.face.createLBPHFaceRecognizer()
+face_recognizer = cv2.face.LBPHFaceRecognizer_create() #createLBPHFaceRecognizer()
 
 # or use EigenFaceRecognizer by replacing above line with
 # face_recognizer = cv2.face.createEigenFaceRecognizer()
@@ -302,8 +302,9 @@ def predict(test_img):
 
     # predict the image using our face recognizer
     label = face_recognizer.predict(face)
+    print(label)
     # get name of respective label returned by face recognizer
-    label_text = subjects[label]
+    label_text = subjects[label[0]]
 
     # draw a rectangle around face detected
     draw_rectangle(img, rect)
