@@ -86,7 +86,7 @@ def worker(input_q, output_q):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-src', '--source', dest='video_source',
-                        default=0, help='Device index of the camera.')
+                        default='http://192.168.0.47:8080/video?.mjpeg', help='Device index of the camera.') # default=0
     parser.add_argument('-wd', '--width', dest='width', type=int,
                         default=480, help='Width of the frames in the video stream.')
     parser.add_argument('-ht', '--height', dest='height', type=int,
