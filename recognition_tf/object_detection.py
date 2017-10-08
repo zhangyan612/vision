@@ -125,8 +125,8 @@ if __name__ == '__main__':
             break
 
     fps.stop()
-    print('[INFO] elapsed time (total): {:.2f}'.format(fps.elapsed()))
-    print('[INFO] approx. FPS: {:.2f}'.format(fps.fps()))
+    # print('[INFO] elapsed time (total): {:.2f}'.format(fps.elapsed()))
+    # print('[INFO] approx. FPS: {:.2f}'.format(fps.fps()))
 
     pool.terminate()
     video_capture.stop()
