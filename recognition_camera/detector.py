@@ -34,7 +34,7 @@ while True:
              nbr_predicted='Diana Barron'
         # cv2.putText(img, text, (x, y), cv2.FONT_HERSHEY_PLAIN, 1.5, (0, 255, 0), 2)
         #cv2.PutText(cv2.fromarray(im), str(nbr_predicted)+"--"+str(conf), (x, y+h), font, 255) # Draw the text
-        draw_text(im, str(nbr_predicted)+"--"+str(conf), x, y+h)
+        draw_text(im, str(nbr_predicted)+"--"+ str(conf), x, y+h)
         #cv2.putText(im, str(nbr_predicted)+"--"+str(conf), (x, y+h), cv2.FONT_HERSHEY_PLAIN, 255)  # Draw the text
 
         cv2.imshow('im', im)
