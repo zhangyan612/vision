@@ -11,7 +11,9 @@ cascPath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 log.basicConfig(filename='webcam.log',level=log.INFO)
 
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture() # 0
+video_capture.open("http://192.168.0.47:8080/video?.mjpeg")
+
 anterior = 0
 
 while True:

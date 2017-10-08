@@ -14,7 +14,7 @@ while True:
     # Clear screen
     os.system('clear')
     # Exit key
-    print "Press 'q' to exit"
+    print("Press 'q' to exit")
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 # When everything done, release the capture

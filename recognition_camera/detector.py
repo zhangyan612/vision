@@ -16,7 +16,9 @@ cascadePath = "Classifiers/face.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath)
 path = 'dataSet'
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture() # 0
+cam.open("http://192.168.0.47:8080/video?.mjpeg")
+
 #font = cv2.InitFont(cv2.CV_FONT_HERSHEY_SIMPLEX, 1, 1, 0, 1, 1) #Creates a font
 while True:
     ret, im = cam.read()

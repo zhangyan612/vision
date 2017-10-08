@@ -1,5 +1,7 @@
 import cv2
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(1) # 0
+cam.open("http://192.168.0.47:8080/video?.mjpeg")
+
 detector = cv2.CascadeClassifier('Classifiers/face.xml')
 i = 0
 offset = 50
